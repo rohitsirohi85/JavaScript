@@ -35,6 +35,63 @@ let boolEmp=Boolean(emp);  // false coz string is empty but if string contains a
 console.log(boolEmp);
 
 
+// ******OPERATIONS*******//
+
+let pos=3;
+let negValue=-pos;  // convert positive to negative
+console.log(negValue); // -3
+
+console.log(2+2); // 4
+console.log(2-2); // 0
+console.log(2*2); // 4
+console.log(2**3); // 2*2*2
+console.log(2/2);  // 1
+console.log(2%2); // 0
+
+// add two strings
+
+let one="hello";
+let two="rohit";
+let mix=one+two;
+
+console.log(mix);
+
+
+// note if use add operation between number and string
+console.log("1"+2);  // 12 coz string add with number
+console.log(1+"2");  // 12 same reason
+// but
+console.log(1+2+"2");  // here 1+2 then join with string = 32
+console.log("1"+2+2);  // here 1 join with 2 and next 2 join with that 2 = 122
+
+console.log(+true); // 1 coz true is 1
+console.log(+""); // 0 coz empty string
+console.log(+"kjaff");  // Nan(not a number)
+
+// postfix
+
+let a=1;
+let b=a++; // first store then increment
+console.log(b+","+a); // 1,2
+
+// prefix
+
+let q=1;
+let w=++q;  // first incr then store
+console.log(w+","+q); // 2,2
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
