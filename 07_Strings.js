@@ -5,7 +5,7 @@ const age =23
 
 // console.log("my name is "+name);  // also work but it's an old way to use 
 
-console.log(`hello my name is ${name} , my age is ${age} how are you ?`);
+console.log(`hello my name is ${name} , my age is ${age} how are you ?`);  // ${} this is the placeholders which used in string to hold values and this way called string interpolation
 
 
 // we can use string constructor with object by new keyword
