@@ -30,7 +30,7 @@ console.log(typeof(newArr));  // will be string now
 
 // now check slice and splice
 const checkArr=[0,1,2,3,4,5,"you",true];
-console.log(checkArr.slice(1,3));  // give portion of the array by (start,end) but end not include
+console.log(checkArr.slice(1,3));  // give portion of the array by (start-index,end-index) but end not include
 console.log(checkArr.splice(1,3));  //  give portion start,end but end included and it effect the original array
 console.log(checkArr);  // here the spliced portion will be removed so spliced the original array but slice not
 
