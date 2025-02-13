@@ -146,7 +146,7 @@ const jsonExample = {
 }
 
 // JSON can also represent arrays of objects
-const jsonArray = [
+const jsonArray = [  // also an representation of array of objects
     {},
     {},
     {}
