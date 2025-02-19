@@ -13,3 +13,6 @@
     // This function also executes immediately and accepts an argument.
     console.log(`DB CONNECTED TWO ${name}`); // Output: DB CONNECTED TWO hitesh
 } )('hitesh');  // Function is invoked with 'hitesh' as the parameter
+
+
+// conclusion = IIFE does not need to be called explicitly, it will be called automatically when the script runs.
