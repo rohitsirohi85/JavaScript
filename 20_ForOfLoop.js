@@ -1,4 +1,4 @@
-// Using `for...of` to iterate over an array
+// Using `for...of` to iterate over values of array
 const arr = [1, 2, 3, 4, 5];
 
 for (const num of arr) {
