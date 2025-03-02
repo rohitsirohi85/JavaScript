@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practical</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent.children);  // print all children of parent which is div.day with length 3 in html collection
+    console.log(parent.children[0].innerHTML);  // print first child of parent which is div.day with text Monday
+
+    // coz this gives the html collection so we can't use forEach loop directly but we can use for loop
+    for (let i = 0; i < parent.children.length; i++) { // print all children of parent which is div.day with length 3 in html collection
+        const element = parent.children[i];
+        console.log(element.innerHTML);
+    }
+
+    parent.children[0].style.color="red";  // change the color of first child of parent which is div.day with text Monday
+    console.log(parent.firstElementChild); // print first child of parent which is div.day with text Monday
+    console.log(parent.lastElementChild); // print last child of parent which is div.day with text wednesday
+    
+    const dayOne=document.querySelector('.day'); // querySelector will give the first element of the class
+    console.log(dayOne);
+    console.log(dayOne.parentElement); // print the parent of dayOne which is div.parent
+    console.log(dayOne.nextElementSibling); // print the next sibling of dayOne which is div.day with text Tuesday
+    console.log("NODES: ",parent.childNodes); // print all children of parent which is div.day with length 7 in node list coz it consider line break as a node
+    
+</script>
+</html>
