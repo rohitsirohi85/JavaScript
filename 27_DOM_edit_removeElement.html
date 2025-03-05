@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert and delete by dom</title>
+</head>
+<body style="background-color: black; color: white;">
+   <ul class="language">
+    <li>Python</li>
+   </ul>
+</body>
+<script>
+    // 1st way to create element
+    function langName(languageName){  // make a function to create element
+        const li =  document.createElement('li');  // creating a li element
+   li.innerHTML=`${languageName}`;   // adding text inside li element
+   document.querySelector('.language').appendChild(li);  // appending the li to ul element
+    }
+    langName('java');
+    langName('Springboot');
+
+    // 2nd way to create element
+  
+     function langCreate(languageName){
+        const li = document.createElement('li');  // creating a li element
+        li.appendChild(document.createTextNode(languageName)); // adding text inside li element via text node and appending it to li
+        document.querySelector('.language').appendChild(li);  // append li to ul
+     }
+     langCreate('JavaScript');
+
+     // edit any specific element
+     const secondLang=document.querySelector('li:nth-child(2)');  // selecting the 2nd li element
+    //  secondLang.innerHTML="C++";  // changing the text of 2nd li element directly
+    
+    const newLi=document.createElement('li');
+    newLi.textContent="C++"; // insert the text of 2nd li element 
+     secondLang.replaceWith(newLi);
+
+     // edit the whole html
+     const firstLang=document.querySelector('li:nth-child(1)');
+   //  firstLang.outerHTML='<li>Java</li>'; // changing the whole html of 1st li element
+   
+
+   // remove any specific element
+   const delLang=document.querySelector('li:last-child'); // selecting the 1st li element
+  // delLang.remove(); // removing the 1st li element
+
+</script>
+</html>
