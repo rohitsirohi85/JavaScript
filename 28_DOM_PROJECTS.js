@@ -3,7 +3,6 @@
 //project link
 //  (https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
-// # Solution code
 
 // ## project 1  (bg-Color changer)
 
@@ -27,5 +26,30 @@ buttons.forEach(function (item) {    // use for each loop to select and apply ev
     }
   });
 });
+
+// project 2    bmi calculator with weight and height
+
+const form = document.querySelector('form');
+form.addEventListener('submit',function(event){
+  event.preventDefault()
+  const height = parseInt(document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#weight').value)
+  const result = document.querySelector('#results')
+
+  if(weight == '' || weight<0 || isNaN(weight)){
+    alert("invalid weight");
+  }else if(height == '' || height<0 || isNaN(height)){
+    alert("invalid height");
+  }else{
+    const bmi=(weight/((height*height)/10000)).toFixed(2);
+    if(bmi<18.6){
+      result.innerHTML=`you are underweight your bmi : ${bmi}`
+    }else if (bmi<=24.9 && bmi>=18.6){
+      result.innerHTML=`you have normal bmi ${bmi}`
+    }else if(bmi>24.9){
+      result.innerHTML=`over weight bmi ${bmi}`
+    }
+  }
+})
 
 
