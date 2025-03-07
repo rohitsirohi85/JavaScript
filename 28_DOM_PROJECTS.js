@@ -52,4 +52,21 @@ form.addEventListener('submit',function(event){
   }
 })
 
+// project 3 .. digital clock
+
+// const clock = document.querySelector('#clock');   // getting the clock element id by query selector , or we can use getElementById
+const clock = document.getElementById('clock')      // getting the clock element id by getElementById
+
+setInterval(function(){    // for set the time interval to update the time
+  const dateAndTime = new Date().toLocaleTimeString()   // getting the current time and date
+  clock.innerHTML=dateAndTime;  //  set the current time and date to the clock element
+},1000)  // 1000 means 1 second
+
+
+
+
+
+
+
+
 
