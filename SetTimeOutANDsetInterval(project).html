@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basin async</title>
+</head>
+<body>
+    <h1>Rohit Sirohi</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+//     const changeText = function(){
+//         document.querySelector('h1').innerHTML="Rohit Singh Sirohi"
+//         console.log("command run")
+//     }
+//    const stopping =  setTimeout(changeText,2000)  // set time out run the piece of code after the given time (in ms)(2000ms = 2sec)
+
+//     document.querySelector('#bt').addEventListener('click',function(){
+//         clearTimeout(stopping)  // now when we click on stop button so set timeout will no longer in use
+//         console.log("stopped")
+//    })
+
+ /* let's understand set interval via project */
+ // start the set interval when click on start
+
+   const text = function(){
+    console.log("start")
+   }
+
+
+   
+   let startInterval;
+  
+  document.querySelector('#start').addEventListener('click',function(){
+     startInterval = setInterval(text,1000)
+  })
+
+  // stop the running set interval immediately when click stop
+
+  document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(startInterval)
+  })
+
+</script>
+</html>
