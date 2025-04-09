@@ -2,6 +2,7 @@
 // find the project on
 // https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html
 
+/* unlimited color change */
 
 // work on to create random color
 const randomColor = function(){
@@ -37,7 +38,27 @@ const randomColor = function(){
   }
   document.querySelector('#stop').addEventListener('click',stopChangingColor)
   
+  /* key check */
+
+  const tableText = document.querySelector('.key')
+
+window.addEventListener('keydown',function(e){
+  tableText.innerHTML = `
+  <table>
+  <tr>
+    <th>key</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.code}</td>
+  </tr>
   
+</table>
+  `
+})
+
+
   
   
   
