@@ -24,4 +24,22 @@ function createUser(username, email, password) {
 // Using 'new' to create an instance of createUser
 // This will:
 // 1. Create an empty object
-// 2. Set 'this' inside createUser to that n
+// 2. Set 'this' inside createUser to that new object
+// 3. Call SetUsername with 'this' pointing to the same object
+// 4. Return the object with all properties set
+const chai = new createUser("chai", "chai@fb.com", "123");
+
+// Logging the final object created
+console.log(chai);
+
+/*
+Expected output:
+
+called SetUsername
+{
+  username: 'chai',
+  email: 'chai@fb.com',
+  password: '123'
+}
+
+*/
